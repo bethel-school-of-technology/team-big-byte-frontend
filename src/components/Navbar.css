@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -24,9 +24,10 @@
     margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 4rem;
     display: flex;
     align-items: center;
+  
   }
   
   .fa-typo3 {
