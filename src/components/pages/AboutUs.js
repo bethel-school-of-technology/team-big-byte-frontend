@@ -1,6 +1,11 @@
-import React from 'react';
-import '../../App.css';
+import React from 'react'
 
-export default function AboutUs() {
-  return <h1 className='aboutus'>ABOUT US</h1>;
+const AboutUs = () => {
+  return (
+    <div>
+      <h1>About Us</h1>
+    </div>
+  )
 }
+
+export default AboutUs

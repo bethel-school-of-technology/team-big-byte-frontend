@@ -22,6 +22,7 @@ function HeroSection() {
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
+          Link to='./pages/AboutUs.js'
           onClick={console.log('BIGBYTE Final Project 2021')}
         >
           LEARN MORE <i className='fas fa-chevron-up' />

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import AboutUs from './components/pages/AboutUs';
 import Shop from './components/pages/Shop';
 import SignUp from './components/pages/SignUp';
+import Form from './components/Form';
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/AboutUs' component={AboutUs} />
+          <Route path='/About-Us' component={AboutUs} />
           <Route path='/shop' component={Shop} />
-          <Route path='/sign-up' component={SignUp} />
+          <Route path='/SignUp' component={SignUp} />
+          <Route path='/Form' component={Form} />
         </Switch>
       </Router>
     </>

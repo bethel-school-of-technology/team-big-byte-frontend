@@ -1,6 +1,16 @@
 import React from 'react';
-import '../../App.css';
+import Footer from '../Footer';
+import Form from '../Form';
 
-export default function SignUp() {
-  return <h1 className='sign-up'>SIGN UP</h1>;
+
+const SignUp = () => {
+  return (
+    <div>
+      <Form />;
+      <Footer />
+    </div>
+  )
 }
+
+export default SignUp
+
