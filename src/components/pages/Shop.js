@@ -1,11 +1,14 @@
 import React from 'react';
 import Footer from '../Footer';
 import ProductCards from '../ProductCards';
+import ActiveCart from '../ActiveCart';
+
 
 const Shop = () => {
   return (
     <div>
-      <ProductCards />;
+      <ProductCards />
+      <ActiveCart />
       <Footer />
     </div>
   )

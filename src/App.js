@@ -7,6 +7,7 @@ import AboutUs from './components/pages/AboutUs';
 import Shop from './components/pages/Shop';
 import SignUp from './components/pages/SignUp';
 import Form from './components/Form';
+import Cart from './components/pages/Cart';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/About-Us' component={AboutUs} />
           <Route path='/shop' component={Shop} />
           <Route path='/SignUp' component={SignUp} />
+          <Route path='/Cart' component={Cart} />
           <Route path='/Form' component={Form} />
         </Switch>
       </Router>

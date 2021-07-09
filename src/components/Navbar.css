@@ -9,6 +9,9 @@
     top: 0;
     z-index: 999;
   }
+  .material-icons{
+    
+  }
   
   .navbar-container {
     display: flex;
@@ -26,7 +29,7 @@
     text-decoration: none;
     font-size: 4rem;
     display:flex;
-    align-items: center;
+    align-items:inherit;
   
   }
   
@@ -48,6 +51,7 @@
   
   .nav-item {
     height: 80px;
+    padding-top: 70px;
   }
   
   .nav-links {

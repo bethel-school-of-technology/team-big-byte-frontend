@@ -1,35 +1,65 @@
-import React from 'react'
-import ProductCardsItem from './ProductCardsItem';
+import React, { useEffect, useState } from 'react';
+import data from './ProductCardsData';
 import './ProductCards.css';
+import {
+  ProductsContainer,
+  ProductWrapper,
+  ProductTitle,
+  ProductCard,
+  ProductImg,
+  ProductInfo,
+  ProductDesc,
+  ProductPrice,
+  ProductButton
+} from './ProductCardsElements';
+
+const Products = ({ }) => {
+
+  const [myData, setData] = useState([])
+
+  useEffect(() => {
+    setData(data);
+  }, [])
+
+  function addToCart(selectedProduct) {
+    // console.log(selectedProduct);
+    let currentCart = localStorage.getItem('cart');
+    if (currentCart == null) {
+      let cart = [selectedProduct];
+      localStorage.setItem('cart', JSON.stringify(cart))
+
+    }
+    else {
+      console.log(currentCart);
+      let cart = JSON.parse(currentCart);
+      cart.push(selectedProduct);
+      localStorage.setItem('cart', JSON.stringify(cart))
+    }
+  }
+
+  return (
+    <ProductsContainer>
+      <ProductWrapper>
+        {myData.map((product) => {
+          return (
+            <ProductCard>
+              <ProductImg src={product.img} alt={product.alt} />
+              <ProductInfo>
+                <ProductTitle>{product.name}</ProductTitle>
+                <ProductDesc>{product.desc}</ProductDesc>
+                <ProductPrice>{product.price}</ProductPrice>
+                <ProductButton onClick={e => addToCart(product)}>{product.button}</ProductButton>
+              </ProductInfo>
+            </ProductCard>
+          );
+        })}
+      </ProductWrapper>
+    </ProductsContainer>
 
 
-function ProductCards() {
-    return (
-        <div className='productCards'>
-          <h1>Shop the latest products here!</h1>
-          <div className='productCards__container'>
-            <div className='productcCards__wrapper'>
-              <ul className='productCards__items'>
-                <ProductCardsItem
-                  src='images/img-stand.jpg'
-                  label='$45.00'
-                  path='/shop'
-                />
-                <ProductCardsItem
-                  src='images/img-watch.jpg'
-                  label='$125.00'
-                  path='/shop'
-                />
-                <ProductCardsItem
-                  src='images/img-speaker.jpg'
-                  label='$80.00'
-                  path='/shop'
-                />
-              </ul>
-            </div>
-          </div>
-        </div>
-      );
-}
 
-export default ProductCards
+  );
+
+};
+
+export default Products;
